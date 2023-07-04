@@ -19,6 +19,7 @@ const config = {
 		'plugin:@typescript-eslint/recommended',
 		'plugin:@typescript-eslint/recommended-requiring-type-checking',
 	],
+	ignorePatterns: ["node_modules/**", "dist/**"],
 	parserOptions: {
 		project: path.join(path.dirname(pkgPath), 'tsconfig.json'),
 	},
