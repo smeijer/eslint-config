@@ -1,0 +1,35 @@
+{
+  "name": "@smeijer/eslint-config",
+  "version": "1.0.0",
+  "description": "Shared ESLint config for my projects",
+  "main": "index.js",
+  "bin": "init.js",
+  "scripts": {
+    "test": "echo \"no test specified\" && exit 0"
+  },
+  "repository": "smeijer/eslint-config",
+  "author": {
+    "name": "Stephan Meijer",
+    "email": "stephan.meijer@gmail.com",
+    "url": "https://meijer.ws"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/smeijer/eslint-config/issues"
+  },
+  "homepage": "https://github.com/smeijer/eslint-config#readme",
+  "dependencies": {
+    "@smeijer/tsconfig": "^1.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.61.0",
+    "@typescript-eslint/parser": "^5.61.0",
+    "eslint": "^8.44.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "prettier": "^2.8.8",
+    "read-pkg-up": "^7.0.1"
+  }
+}
