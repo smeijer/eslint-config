@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const cwd = process.cwd();
 
-const filepath = path.join(cwd, 'eslintrc.cjs');
+const filepath = path.join(cwd, '.eslintrc.cjs');
 const template = `module.exports = {
   extends: ['@smeijer/eslint-config'],
 }

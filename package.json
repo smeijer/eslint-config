@@ -1,6 +1,6 @@
 {
   "name": "@smeijer/eslint-config",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Shared ESLint config for my projects",
   "main": "index.js",
   "bin": "init.js",
