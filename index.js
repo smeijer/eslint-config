@@ -25,6 +25,13 @@ const config = {
 	},
 	plugins: ['eslint-plugin-simple-import-sort', 'import'],
 	rules: {
+		'prettier/prettier': ['error', {
+			"singleQuote": true,
+			"trailingComma": "all",
+			"printWidth": 120,
+			"semi": true,
+			"useTabs": true
+		}],
 		'@typescript-eslint/explicit-module-boundary-types': 'off',
 		'@typescript-eslint/no-explicit-any': 'off',
 		'prefer-const': ['error', { destructuring: 'all' }],
