@@ -2,27 +2,15 @@ const readPkg = require('read-pkg-up');
 const packageResult = readPkg.sync({ normalize: false });
 const path = require('path');
 
-const hasPackage = Boolean(packageResult);
-const packageJson = hasPackage ? packageResult.packageJson : {};
-
 const pkgPath = packageResult.path;
 
-const pkgDependencies = {
-	...packageJson.dependencies,
-	...packageJson.devDependencies,
-};
-
-const config = {
+module.exports = {
 	parser: '@typescript-eslint/parser',
 	extends: [
 		'plugin:prettier/recommended',
 		'plugin:@typescript-eslint/recommended',
-		'plugin:@typescript-eslint/recommended-requiring-type-checking',
 	],
 	ignorePatterns: ["node_modules/**", "dist/**"],
-	parserOptions: {
-		project: path.join(path.dirname(pkgPath), 'tsconfig.json'),
-	},
 	plugins: ['eslint-plugin-simple-import-sort', 'import'],
 	rules: {
 		'prettier/prettier': ['error', {
@@ -47,29 +35,33 @@ const config = {
 		],
 		'no-console': ['error', { allow: ['warn', 'error'] }],
 	},
-};
-
-if (pkgDependencies['react']) {
-	config.extends = [
-		...config.extends,
-		'plugin:react/recommended',
-		'plugin:react-hooks/recommended',
-	];
-
-	config.rules = {
-		...config.rules,
-		// we use jsx-runtime automatic
-		'react/jsx-uses-react': 'off',
-		'react/react-in-jsx-scope': 'off',
-		'react/no-unknown-property': ['error', { ignore: ['css'] }],
-	};
-
-	config.settings = {
-		...config.settings,
-		react: {
-			version: 'detect',
+	overrides: [
+		{
+			files: ['*.ts', '*.tsx'],
+			extends: [
+				'plugin:@typescript-eslint/recommended-requiring-type-checking',
+			],
+			parserOptions: {
+				project: path.join(path.dirname(pkgPath), 'tsconfig.json'),
+			},
 		},
-	}
-}
-
-module.exports = config;
+		{
+			files: ['*.tsx', '*.jsx'],
+			extends: [
+				'plugin:react/recommended',
+				'plugin:react-hooks/recommended',
+			],
+			rules: {
+				// we use jsx-runtime automatic
+				'react/jsx-uses-react': 'off',
+				'react/react-in-jsx-scope': 'off',
+				'react/no-unknown-property': ['error', {ignore: ['css']}],
+			},
+			settings: {
+				react: {
+					version: 'detect',
+				}
+			}
+		}
+	],
+};
