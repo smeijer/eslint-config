@@ -1,6 +1,7 @@
 const readPkg = require('read-pkg-up');
 const packageResult = readPkg.sync({ normalize: false });
 const path = require('path');
+const prettier = require('@smeijer/prettier-config');
 
 const pkgPath = packageResult.path;
 
@@ -13,13 +14,7 @@ module.exports = {
 	ignorePatterns: ["node_modules/**", "dist/**"],
 	plugins: ['eslint-plugin-simple-import-sort', 'import'],
 	rules: {
-		'prettier/prettier': ['error', {
-			"singleQuote": true,
-			"trailingComma": "all",
-			"printWidth": 120,
-			"semi": true,
-			"useTabs": true
-		}],
+		'prettier/prettier': ['error', prettier],
 		'@typescript-eslint/explicit-module-boundary-types': 'off',
 		'@typescript-eslint/no-explicit-any': 'off',
 		'prefer-const': ['error', { destructuring: 'all' }],

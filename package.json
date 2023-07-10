@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/smeijer/eslint-config#readme",
   "dependencies": {
+    "@smeijer/prettier-config": "^1.0.0",
     "@smeijer/tsconfig": "^1.0.0",
     "@typescript-eslint/eslint-plugin": "^5.61.0",
     "@typescript-eslint/parser": "^5.61.0",
