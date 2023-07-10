@@ -1,26 +1,26 @@
 {
   "name": "@smeijer/eslint-config",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "Shared ESLint config for my projects",
-  "main": "index.js",
-  "bin": "init.js",
+  "license": "MIT",
+  "repository": "smeijer/eslint-config",
+  "author": "Stephan Meijer <stephan.meijer@gmail.com> (https://meijer.ws)",
+  "bugs": "https://github.com/smeijer/eslint-config/issues",
+  "homepage": "https://github.com/smeijer/eslint-config#readme",
+  "funding": "https://github.com/sponsors/smeijer",
+  "main": "./index.js",
+  "bin": "./init.js",
+  "files": [
+    "./index.js",
+    "./init.js",
+    "./license"
+  ],
   "scripts": {
     "test": "echo \"no test specified\" && exit 0"
   },
-  "repository": "smeijer/eslint-config",
-  "author": {
-    "name": "Stephan Meijer",
-    "email": "stephan.meijer@gmail.com",
-    "url": "https://meijer.ws"
-  },
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/smeijer/eslint-config/issues"
-  },
-  "homepage": "https://github.com/smeijer/eslint-config#readme",
   "dependencies": {
-    "@smeijer/prettier-config": "^1.0.0",
-    "@smeijer/tsconfig": "^1.0.0",
+    "@smeijer/prettier-config": "^1.1.0",
+    "@smeijer/tsconfig": "^1.1.0",
     "@typescript-eslint/eslint-plugin": "^5.61.0",
     "@typescript-eslint/parser": "^5.61.0",
     "eslint": "^8.44.0",
