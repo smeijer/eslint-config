@@ -19,18 +19,18 @@
     "test": "echo \"no test specified\" && exit 0"
   },
   "dependencies": {
-    "@smeijer/prettier-config": "^1.1.0",
-    "@smeijer/tsconfig": "^1.1.0",
-    "@typescript-eslint/eslint-plugin": "^5.61.0",
-    "@typescript-eslint/parser": "^5.61.0",
-    "eslint": "^8.44.0",
-    "eslint-config-prettier": "^8.8.0",
-    "eslint-plugin-import": "^2.27.5",
-    "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-react": "^7.32.2",
+    "@smeijer/prettier-config": "^1.2.0",
+    "@smeijer/tsconfig": "^1.2.0",
+    "@typescript-eslint/eslint-plugin": "^6.7.0",
+    "@typescript-eslint/parser": "^6.7.0",
+    "eslint": "^8.49.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-import": "^2.28.1",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-simple-import-sort": "^10.0.0",
-    "prettier": "^2.8.8",
-    "read-pkg-up": "^7.0.1"
+    "prettier": "^3.0.3",
+    "read-pkg-up": "^10.1.0"
   }
 }
